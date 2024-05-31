@@ -1,10 +1,10 @@
 
-const fs = require ('fs')
+import fs from 'fs'
 
 
 
 
- class ProductManager {
+  export class ProductManager {
     
 
     constructor(path) {
@@ -35,10 +35,13 @@ const fs = require ('fs')
             if (codeCreated) return 'El código que intenta cargar ya existe en la base'
 
             if (productsDataBase.length === 0) {
-                product.id = 1
+                product.id = 1  
             } else {
-                product.id = productsDataBase[productsDataBase.length - 1].id + 1;
-            }
+                product.id = productsDataBase[productsDataBase.length - 1].id + 1
+            }   
+
+            product.timestamp = Date.now()  
+
 
             productsDataBase.push(product)
 
@@ -54,15 +57,16 @@ const fs = require ('fs')
     getProducts = async () => {
 
         try {
+            const productsDataBase = await this.readFile()
 
-            return await this.readFile()
+            return productsDataBase
+    }   
 
-        } catch {
+        catch (error) {
 
-            throw new Error("Base not found");
+            console.log(error)
 
-        }
-    }
+        }}
 
     getProductById = async (pid) => {
 
@@ -180,4 +184,13 @@ const fs = require ('fs')
         }
     }
 }
- 
+
+const pm = new ProductManager('./products.json')
+
+pm.addProduct({title: 'Escuadra1', price: 123.45, thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png',code: 1})
+pm.addProduct({title: 'Escuadra2', price: 123.45, thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png',code: 2})
+pm.addProduct({title: 'Escuadra3', price: 123.45, thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png',code: 3})
+pm.addProduct({title: 'Escuadra4', price: 123.45, thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png',code: 4})
+pm.addProduct({title: 'Escuadra5', price: 123.45, thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png',code: 5})
+pm.addProduct({title: 'Escuadra6', price: 123.45, thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png',code: 6})
+

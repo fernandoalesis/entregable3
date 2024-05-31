@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Escuadra6",
+		"price": 123.45,
+		"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png",
+		"code": 1,
+		"id": 1,
+		"timestamp": 1717135099192
+	},
+	{
+		"title": "Escuadra6",
+		"price": 123.45,
+		"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png",
+		"code": 2,
+		"id": 2,
+		"timestamp": 1717135099193
+	},
+	{
+		"title": "Escuadra6",
+		"price": 123.45,
+		"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png",
+		"code": 3,
+		"id": 3,
+		"timestamp": 1717135099194
+	},
+	{
+		"title": "Escuadra6",
+		"price": 123.45,
+		"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png",
+		"code": 4,
+		"id": 4,
+		"timestamp": 1717135099195
+	},
+	{
+		"title": "Escuadra6",
+		"price": 123.45,
+		"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-512.png",
+		"code": 6,
+		"id": 5,
+		"timestamp": 1717135530609
+	}
+]
