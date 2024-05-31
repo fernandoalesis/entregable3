@@ -1,9 +1,10 @@
-import fs from 'node:fs'
+
+const fs = require ('fs')
 
 
 
 
-export class ProductManager {
+ class ProductManager {
     
 
     constructor(path) {
@@ -179,4 +180,4 @@ export class ProductManager {
         }
     }
 }
-
+ 
